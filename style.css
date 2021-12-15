@@ -14,26 +14,26 @@ main {
 }
 .game {
     display: flex;
+    flex-wrap: wrap;
     position: relative;
 }
 .board {
     display: flex;
-    /* position: relative; */
     border: rgb(0, 59, 155) 10px solid;
     border-top: rgb(0, 59, 155) 5px solid;
     border-radius: 2%;
 }
 
 .slot {
-    height: 90px;
-    width: 90px;
+    height: 5.625rem;
+    width: 5.625rem;
     overflow: hidden;
 }
 
 .hole {
     transform: translate(-25px, -25px);
-    height: 140px;
-    width: 140px;
+    height: 8.75rem;
+    width: 8.75rem;
     border-radius: 50%;
     border: solid 30px rgb(0, 59, 155);
 }
