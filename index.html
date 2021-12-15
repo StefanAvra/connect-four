@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>connect four</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <main>
+
+        <div class="game">
+            <div class="cursor player1"></div>
+            <div class="board">
+                <div class="column">
+                    <div class="slot"><div class="hole"></div></div>
+                    <div class="slot"><div class="hole"></div></div>
+                    <div class="slot"><div class="hole"></div></div>
+                    <div class="slot"><div class="hole"></div></div>            
+                    <div class="slot"><div class="hole"></div></div>
+                    <div class="slot"><div class="hole"></div></div>
+                </div>
+                <div class="column">
+                    <div class="slot"><div class="hole"></div></div>
+                    <div class="slot"><div class="hole"></div></div>
+                    <div class="slot"><div class="hole"></div></div>
+                    <div class="slot"><div class="hole"></div></div>            
+                    <div class="slot"><div class="hole"></div></div>
+                    <div class="slot"><div class="hole"></div></div>
+                </div>
+                <div class="column">
+                    <div class="slot"><div class="hole"></div></div>
+                    <div class="slot"><div class="hole"></div></div>
+                    <div class="slot"><div class="hole"></div></div>
+                    <div class="slot"><div class="hole"></div></div>            
+                    <div class="slot"><div class="hole"></div></div>
+                    <div class="slot"><div class="hole"></div></div>
+                </div>
+                <div class="column">
+                    <div class="slot"><div class="hole"></div></div>
+                    <div class="slot"><div class="hole"></div></div>
+                    <div class="slot"><div class="hole"></div></div>
+                    <div class="slot"><div class="hole"></div></div>            
+                    <div class="slot"><div class="hole"></div></div>
+                    <div class="slot"><div class="hole"></div></div>
+                </div>
+                <div class="column">
+                    <div class="slot"><div class="hole"></div></div>
+                    <div class="slot"><div class="hole"></div></div>
+                    <div class="slot"><div class="hole"></div></div>
+                    <div class="slot"><div class="hole"></div></div>            
+                    <div class="slot"><div class="hole"></div></div>
+                    <div class="slot"><div class="hole"></div></div>
+                </div>
+                <div class="column">
+                    <div class="slot"><div class="hole"></div></div>
+                    <div class="slot"><div class="hole"></div></div>
+                    <div class="slot"><div class="hole"></div></div>
+                    <div class="slot"><div class="hole"></div></div>            
+                    <div class="slot"><div class="hole"></div></div>
+                    <div class="slot"><div class="hole"></div></div>
+                </div>
+                <div class="column">
+                    <div class="slot"><div class="hole"></div></div>
+                    <div class="slot"><div class="hole"></div></div>
+                    <div class="slot"><div class="hole"></div></div>
+                    <div class="slot"><div class="hole"></div></div>            
+                    <div class="slot"><div class="hole"></div></div>
+                    <div class="slot"><div class="hole"></div></div>
+                </div>
+            </div>
+            <div class="gameover"><p class="winner"></p><p class="again">Play again</p></div>
+            <div class="ui">
+                <div class="restart">🔁</div>
+                <input type="text" class="player-name player1 playing" value="Player1"> 
+                <input type="text" class="player-name player2" value="Player2">
+
+            </div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #ffe4e1;
+    margin: 0;
+    font-family: "Fredoka One", cursive;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.game {
+    display: flex;
+    position: relative;
+}
+.board {
+    display: flex;
+    /* position: relative; */
+    border: rgb(0, 59, 155) 10px solid;
+    border-top: rgb(0, 59, 155) 5px solid;
+    border-radius: 2%;
+}
+
+.slot {
+    height: 90px;
+    width: 90px;
+    overflow: hidden;
+}
+
+.hole {
+    transform: translate(-25px, -25px);
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    border: solid 30px rgb(0, 59, 155);
+}
+
+.player1 {
+    background-color: #cc4000;
+}
+.player2 {
+    background-color: rgb(51, 190, 255);
+    /* filter: invert(); */
+}
+
+.gameover {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.431);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    flex-direction: column;
+}
+.gameover p {
+    color: white;
+    font-size: 46px;
+    padding: 5px;
+    /* font-family: sans-serif; */
+}
+
+.gameover p.again {
+    font-size: 32px;
+    cursor: pointer;
+    border-bottom: 0px solid white;
+    transition: box-shadow 300ms;
+    box-shadow: inset 0 0px 0 white, inset 0 -0px 0 rgb(255, 255, 255);
+}
+.gameover p.again::after {
+    content: "?";
+}
+.gameover p.again:hover::after {
+    content: " !";
+}
+.gameover p.again:hover {
+    /* border-bottom: 5px solid white; */
+    box-shadow: inset 0 0px 0 rgb(255, 255, 255),
+        inset 0 -44px 0 rgba(255, 255, 255, 0.32);
+}
+.ui {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.ui .player-name {
+    padding-left: 5px;
+    margin-top: 4px;
+    color: white;
+    font-weight: bold;
+    font-family: "Fredoka One", cursive;
+    font-size: large;
+    width: 10em;
+    border-style: none;
+}
+.ui .player-name.playing {
+    animation: 1s ease-in-out highlight-player infinite alternate;
+}
+@keyframes highlight-player {
+    from {
+        color: rgb(255, 255, 255);
+    }
+    to {
+        color: rgb(255, 208, 0);
+    }
+}
+
+.restart {
+    font-size: 32px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.slot.cursor .hole {
+    border-color: #f5f5f5;
+}
+
+.cursor {
+    opacity: 0.7;
+    height: 80px;
+    width: 80px;
+    z-index: -1;
+    border-radius: 50%;
+    position: absolute;
+    top: -90px;
+    left: 5px;
+    transition: left ease-out 100ms;
+}
+.cursor.put {
+    transition: top ease-out 200ms;
+    opacity: 1;
+    filter: invert();
+}
